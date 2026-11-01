@@ -1,0 +1,35 @@
+{
+  "name": "swiftpos-mern",
+  "version": "1.0.0",
+  "description": "High-Performance Modern Retail Point of Sale (POS) System built strictly on the MERN stack",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "node server/server.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client",
+    "install:server": "npm install --prefix server",
+    "install:client": "npm install --prefix client",
+    "install-all": "npm install && npm run install:server && npm run install:client",
+    "seed": "node server/seed/seeder.js",
+    "zip": "powershell -ExecutionPolicy Bypass -File ./scripts/create-zip.ps1"
+  },
+  "keywords": [
+    "pos",
+    "point-of-sale",
+    "mern",
+    "mongodb",
+    "express",
+    "react",
+    "nodejs",
+    "retail",
+    "inventory",
+    "barcode"
+  ],
+  "author": "Anto FSD Project",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
